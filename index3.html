@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzo Codes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
+    <script src="jquerry.txt"></script>
+    <data class="data" value="Contact"></data>
+    <script>
+        $(document).on('submit','#send' , function (e) {
+        e.preventDefault();
+        var FirstName = $('#firstname').val()
+        var LastName = $('#lastname').val()
+        var Emails = $('#Emails').val()
+        var Messages = $('#Messages').val()
+        var Submits = $('#Submits').val()
+        $('.error').load('data.php',{
+            FirstName : FirstName,
+            LastName : LastName,
+            Emails : Emails,
+            Messages : Messages,
+            Submits : Submits
+        }
+        )
+})
+
+    </script>
+</head>
+<body>
+    <header class="hd3">
+        <nav id="thetop">
+            <h2 class="lg"><span class="kz">Kenzo</span> <span class="cds">Codes</span></h2>
+            <ul class="ul">
+                <li class="lst"><a class="hm1" id="hm" href="index.html">Home</a></li>
+                <li class="lst"><a id="ab" class="ab1" href="index2.html">About</a></li>
+                <li class="lst"><a id="cn" class="cn1" href="index3.html">Contact</a></li>
+            </ul>
+            <div class="burger" onclick="menu()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="so">
+            <h3 class="kj3">Contact Me </h3>
+            <h3 class="wd">Junior Web Developer</h3>
+            <p class="lnsp1">/HTML\ /CSS\ /JAVASCRIPT\ /PHP\ /Mysql\</p>
+        </div>
+    
+        </header>
+        <div class="artcle">
+            <p class="cont">Let's Connect</p>
+            <div class="connectart">
+                <div class="hw"><span class="tch">How Can We Get in Touch?</span><br>
+                    <span class="ml">Email</span><br>
+                    The fastest way to reach me is via email. Feel free to shoot me a message at <a class="mls">kenzo<span class="rem"> </span>Johnson<span class="rem"> </span>73@gmail<span class="rem"> </span>.com</a>. I check my inbox regularly and will get back to you as soon as possible.
+                    <div class="spaceing"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <form class="form" action="data.php" id="send" method="POST">
+
+            <h3 class="fm">Send Me A  Message</h3>
+
+            <h3 class="nm">Name (Required)</h3>
+
+            <div class="name">
+
+                <div class="nm1">
+                    <h4 class="reqspecial re1">First Name</h4>
+                    <input class="frsnm" maxlength="15" onclick="" id="firstname" name="FirstName" type="text">
+                </div>
+
+                <div class="nm2">
+                    <h4 class="reqspecial re2">Last Name</h4>
+                    <input class="surnm" maxlength="15" onclick="" id="lastname" name="LastName" type="text">
+                </div>
+            </div>
+
+
+            <h3 class="em">Email (Required)</h3>
+            <div class="mil">
+                <div class="invalidemail"><h4 class="req req1">Email</h4></div>
+                <input class="miil" maxlength="50" onclick="" id="Emails" name="Email"  type="text">
+                <div class="inv none" id="inv">Invalid Email</div>
+                
+            </div>
+
+            
+            <h3 class="eg">Message (Required)</h3>
+            <div class="msgg">
+                <h4 class="req req2">Message</h4>
+                <textarea class="mesge" maxlength="700" id="Messages" onclick=""  name="Message" name=""></textarea>
+            </div>
+          <div class="thebut"><input type="submit" id="Submits" class="bt" name="submit" value="submit"></div>
+          <div class="error errorss" id="#error"></div>
+        </form>
+
+
+        <div class="top"></div>
+        <footer>
+            <h6 class="tp"><a href="#thetop" >Back To Top </a></h6>
+            <h6 class="t1p">Kenzo Johnson</h6>
+        </footer>
+        <div class="top1"></div>
+
+        <script src="script3.js">
+        </script>
+        <script>
+            
+        </script>
+</body>
+</html>
